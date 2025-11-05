@@ -14,7 +14,7 @@ st.set_page_config(
 # =========================
 # SECCIÓN 1: PORTADA Y TÍTULO
 # =========================
-PATH_PORTADA = "img/portada_ml.jpg"
+PATH_PORTADA = "img/MachineLearningPythonLibro.png"
 
 st.markdown(
     '''
@@ -74,6 +74,48 @@ except FileNotFoundError:
     st.markdown("<h1 class='title-text'>Procesamiento de Datasets en Machine Learning</h1>", unsafe_allow_html=True)
     st.markdown("<p class='subtitle-text'>Actividad Individual Práctica</p>", unsafe_allow_html=True)
     st.warning(f"⚠️ No se encontró la imagen de portada en la ruta: {PATH_PORTADA}")
+
+# =========================
+# SECCIÓN 6: INFORMACIÓN DEL DESARROLLADOR
+# =========================
+PATH_LOGO_UNT = "img/UNT_logo.png"
+
+try:
+    logo_unt = Image.open(PATH_LOGO_UNT)
+    col_dev, col_logo = st.columns([5, 1])
+    with col_dev:
+        st.markdown(
+            """
+            <p style='font-size: 0.95em; font-weight: 600; margin-bottom: 3px;'>
+                Desarrollado por: <span style='color:#1E3A8A;'>Tu Nombre Completo</span>
+            </p>
+            <p style='font-size: 0.9em; margin-top: 0px; margin-bottom: 2px; color:#4B5563;'>
+                Escuela Profesional de Ingeniería de Sistemas
+            </p>
+            <p style='font-size: 0.9em; margin-top: 0px; color:#4B5563;'>
+                Universidad Nacional de Trujillo
+            </p>
+            """,
+            unsafe_allow_html=True
+        )
+    with col_logo:
+        st.image(logo_unt, width=80)
+except FileNotFoundError:
+    st.caption("**Desarrollado por:** Tu Nombre Completo")
+    st.caption("Escuela Profesional de Ingeniería de Sistemas")
+    st.caption("Universidad Nacional de Trujillo")
+    st.warning(f"⚠️ No se encontró el logo en la ruta: {PATH_LOGO_UNT}")
+
+# Footer
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown(
+    """
+    <div style='text-align: center; color: #9CA3AF; font-size: 0.85em; padding: 20px 0;'>
+        📊 Aplicación de Procesamiento de Datos en Machine Learning | 2024
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # =========================
 # SECCIÓN 2: DESCRIPCIÓN DE LA APP
@@ -189,44 +231,3 @@ st.markdown(
 
 st.markdown("---")
 
-# =========================
-# SECCIÓN 6: INFORMACIÓN DEL DESARROLLADOR
-# =========================
-PATH_LOGO_UNT = "img/UNT_logo.png"
-
-try:
-    logo_unt = Image.open(PATH_LOGO_UNT)
-    col_dev, col_logo = st.columns([5, 1])
-    with col_dev:
-        st.markdown(
-            """
-            <p style='font-size: 0.95em; font-weight: 600; margin-bottom: 3px;'>
-                Desarrollado por: <span style='color:#1E3A8A;'>Tu Nombre Completo</span>
-            </p>
-            <p style='font-size: 0.9em; margin-top: 0px; margin-bottom: 2px; color:#4B5563;'>
-                Escuela Profesional de Ingeniería de Sistemas
-            </p>
-            <p style='font-size: 0.9em; margin-top: 0px; color:#4B5563;'>
-                Universidad Nacional de Trujillo
-            </p>
-            """,
-            unsafe_allow_html=True
-        )
-    with col_logo:
-        st.image(logo_unt, width=80)
-except FileNotFoundError:
-    st.caption("**Desarrollado por:** Tu Nombre Completo")
-    st.caption("Escuela Profesional de Ingeniería de Sistemas")
-    st.caption("Universidad Nacional de Trujillo")
-    st.warning(f"⚠️ No se encontró el logo en la ruta: {PATH_LOGO_UNT}")
-
-# Footer
-st.markdown("<br>", unsafe_allow_html=True)
-st.markdown(
-    """
-    <div style='text-align: center; color: #9CA3AF; font-size: 0.85em; padding: 20px 0;'>
-        📊 Aplicación de Procesamiento de Datos en Machine Learning | 2024
-    </div>
-    """,
-    unsafe_allow_html=True
-)
