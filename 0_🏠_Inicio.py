@@ -106,16 +106,6 @@ except FileNotFoundError:
     st.caption("Universidad Nacional de Trujillo")
     st.warning(f"⚠️ No se encontró el logo en la ruta: {PATH_LOGO_UNT}")
 
-# Footer
-st.markdown("<br>", unsafe_allow_html=True)
-st.markdown(
-    """
-    <div style='text-align: center; color: #9CA3AF; font-size: 0.85em; padding: 20px 0;'>
-        📊 Aplicación de Procesamiento de Datos en Machine Learning | 2024
-    </div>
-    """,
-    unsafe_allow_html=True
-)
 
 # =========================
 # SECCIÓN 2: DESCRIPCIÓN DE LA APP
@@ -231,3 +221,13 @@ st.markdown(
 
 st.markdown("---")
 
+# Footer
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown(
+    """
+    <div style='text-align: center; color: #9CA3AF; font-size: 0.85em; padding: 20px 0;'>
+        📊 Aplicación de Procesamiento de Datos en Machine Learning | 2024
+    </div>
+    """,
+    unsafe_allow_html=True
+)
