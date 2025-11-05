@@ -30,7 +30,7 @@ st.markdown("**Objetivo:** Preparar los datos para predecir la supervivencia de 
 st.header("1️⃣ Carga del Dataset")
 
 try:
-    df = pd.read_csv('data/titanic.csv')
+    df = pd.read_csv('data/Titanic-Dataset.csv')
     st.success(f"✅ Dataset cargado exitosamente: {df.shape[0]} filas y {df.shape[1]} columnas")
     
     with st.expander("👀 Ver primeras filas del dataset"):
